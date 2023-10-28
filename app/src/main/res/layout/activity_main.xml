@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="275dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/border_input_text"
+        android:ems="10"
+        android:hint="E-posta"
+        android:inputType="textEmailAddress"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:textColorHint="#7C9ED3"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="275dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/border_input_text"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:textColorHint="#7C9ED3"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/gradient_bg_button"
+        android:onClick="signIn"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="Sign In"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Don't have an account?"
+        android:textColor="#393939"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignUp"
+        app:layout_constraintStart_toStartOf="@+id/btnSignUp" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#DDDDDD"
+        android:onClick="signUp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textColor="#405de6"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLoginWithFacebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/btnLoginWithFacebook"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="44dp"
+
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
